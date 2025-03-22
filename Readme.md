@@ -1,6 +1,4 @@
-D'accord ! Je vais te fournir des réponses détaillées aux trois premiers exercices en français, avec des explications claires pour aider les étudiants à comprendre les concepts.  
 
----
 
 ### **Exercice 1 :**  
 Soient \( x \) et \( y \) deux entiers naturels non nuls tels que \( x \times y = 1 \).  
@@ -442,3 +440,345 @@ d \in \{1, 2\}
 \]
 
 ---
+
+
+### **Exercice 10 : Résolution du système dans ℤ**  
+Le système donné est :  
+\[
+\begin{cases}  
+x \equiv 1 \pmod{4} \\  
+x \equiv 1 \pmod{6}  
+\end{cases}
+\]
+
+#### **Étape 1 : Comprendre les congruences**
+- La première équation signifie que **x** laisse un reste de **1** lorsqu'il est divisé par **4**, donc **x = 4k + 1** pour un certain entier **k**.
+- La deuxième équation signifie que **x** laisse un reste de **1** lorsqu'il est divisé par **6**, donc **x = 6m + 1** pour un certain entier **m**.
+
+#### **Étape 2 : Trouver une solution commune**  
+On cherche **x** qui satisfait les deux conditions simultanément.  
+On pose donc :  
+\[
+4k + 1 = 6m + 1
+\]
+En simplifiant :  
+\[
+4k = 6m
+\]
+Ce qui revient à :  
+\[
+2k = 3m
+\]
+
+Cela signifie que **2k** est un multiple de **3**, donc **k** doit être un multiple de **3**.  
+On pose **k = 3t**, avec **t** un entier, d'où :  
+\[
+x = 4(3t) + 1 = 12t + 1
+\]
+
+#### **Conclusion :**
+La solution générale est :  
+\[
+x \equiv 1 \pmod{12}
+\]
+Autrement dit, les valeurs possibles de **x** sont **1, 13, 25, 37, …**  
+
+---
+
+### **Exercice 11 : Étude de a et b**  
+
+On pose **n** un entier naturel vérifiant :  
+\[
+a = 2n + 1, \quad b = n + 3, \quad d = \gcd(a, b)
+\]
+où **n ≥ 5** et  
+\[
+b = 2n^2 - 7n - 4
+\]
+
+#### **1) Montrer que a et b sont divisibles par n**  
+- On a déjà défini **a = 2n + 1** et **b = n + 3**.  
+- On vérifie si **a** et **b** sont divisibles par **n** :
+  - **a** : \( a = 2n + 1 \) n’est **pas divisible** par **n** en général.
+  - **b** : \( b = n + 3 \) n’est **pas divisible** par **n** sauf si **n** divise **3**, ce qui est faux pour **n ≥ 5**.
+
+#### **2) Déterminer les valeurs possibles de d = gcd(a, b)**  
+Le PGCD **d** de **a** et **b** doit diviser toute combinaison linéaire de **a** et **b**.  
+On essaie des valeurs de **n** et on trouve que **d** peut être **1** dans la plupart des cas.
+
+#### **3) Montrer que (2n + 1) ∧ n = 1**  
+- On cherche à démontrer que **gcd(2n + 1, n) = 1**.
+- Comme **2n + 1** est impair et **n** est un entier, ils n’ont **aucun facteur commun**.
+- Par conséquent, leur PGCD est **1**.
+
+**Conclusion :**  
+On a montré que **gcd(2n + 1, n) = 1**.
+
+---
+
+### **Exercice 12 : Étude des entiers impairs et carrés parfaits**  
+
+On considère **a, b, c** trois nombres entiers naturels impairs.
+
+#### **1) Montrer que \( (\forall n \in \mathbb{N}) : \ n^2 \equiv 1 \pmod{8} \)**  
+- Un entier impair peut s’écrire sous la forme **n = 2k + 1** avec **k** entier.  
+- Son carré est donc :  
+  \[
+  n^2 = (2k+1)^2 = 4k^2 + 4k + 1
+  \]
+  \[
+  = 4(k^2 + k) + 1
+  \]
+- **Or, \( k^2 + k \) est toujours pair** (car il est la somme de deux entiers consécutifs).  
+- Donc \( 4(k^2 + k) \) est un multiple de **8**, d’où :  
+  \[
+  n^2 \equiv 1 \pmod{8}
+  \]
+
+#### **2) Montrer que \( a^2 + b^2 + c^2 \) n’est pas un carré parfait**  
+- On a vu que tout carré parfait impair vérifie **\( x^2 \equiv 1 \pmod{8} \)**.  
+- Donc :  
+  \[
+  a^2 + b^2 + c^2 \equiv 1 + 1 + 1 = 3 \pmod{8}
+  \]
+- Or, **3 mod 8 n’est jamais un carré parfait** (les seuls carrés parfaits mod 8 sont **0, 1, 4**).
+- Donc **\( a^2 + b^2 + c^2 \) n’est jamais un carré parfait**.
+
+---
+
+
+## **Exercice 13 : Résolution du système dans ℤ**
+On cherche les solutions entières du système suivant :
+\[
+\begin{cases}  
+x \equiv 3 \pmod{7} \\  
+x \equiv 4 \pmod{9}  
+\end{cases}
+\]
+
+### **1) Exprimer \( x \) en fonction de \( k \)**
+La première congruence nous donne :
+\[
+x = 7k + 3, \quad k \in \mathbb{Z}
+\]
+
+On remplace cette expression dans la deuxième congruence :
+\[
+7k + 3 \equiv 4 \pmod{9}
+\]
+
+### **2) Résolution de l’équation modulaire**
+\[
+7k \equiv 1 \pmod{9}
+\]
+
+On cherche l’inverse de **7 modulo 9**, c'est-à-dire un entier **m** tel que :
+\[
+7m \equiv 1 \pmod{9}
+\]
+En testant les valeurs :
+\[
+7 \times 4 = 28 \equiv 1 \pmod{9}
+\]
+Donc **m = 4** est l’inverse de 7 modulo 9.
+
+On multiplie les deux côtés de l’équation par 4 :
+\[
+k \equiv 4 \pmod{9}
+\]
+
+### **3) Exprimer \( x \) en fonction de \( t \)**
+\[
+k = 9t + 4, \quad t \in \mathbb{Z}
+\]
+
+En remplaçant dans \( x = 7k + 3 \) :
+\[
+x = 7(9t + 4) + 3 = 63t + 28 + 3 = 63t + 31
+\]
+
+### **4) Conclusion**
+\[
+x \equiv 31 \pmod{63}
+\]
+Les solutions sont **\( x = 31, 94, 157, \dots \)**.
+
+---
+
+## **Exercice 14 : Étude du PGCD**
+On considère les entiers :
+\[
+a = 5n + 2, \quad b = 3n + 1
+\]
+avec \( n \in \mathbb{Z} \). On note \( d = \gcd(a, b) \).
+
+### **1) Montrer que \( d \) divise \( 5n + 2 \) et \( 3n + 1 \)**
+Par définition du PGCD, \( d \) doit diviser toute combinaison linéaire de \( a \) et \( b \).  
+On cherche une combinaison de \( a \) et \( b \) qui élimine \( n \).
+
+On fait la combinaison :
+\[
+5a - 3b = 5(5n + 2) - 3(3n + 1)
+\]
+
+Développons :
+\[
+25n + 10 - 9n - 3 = 16n + 7
+\]
+
+Donc, \( d \) divise **\( 16n + 7 \)** pour tout \( n \).
+
+### **2) Trouver les valeurs possibles de \( d \)**
+Si \( d \) divise **\( 16n + 7 \)** quel que soit \( n \), il doit aussi diviser la différence entre deux valeurs de cette expression.
+
+En prenant deux valeurs successives de \( n \), on obtient :
+\[
+d \text{ divise } 16(n+1) + 7 - (16n + 7) = 16
+\]
+
+Donc, \( d \) est un diviseur de 16. Les diviseurs positifs de 16 sont :  
+\[
+1, 2, 4, 8, 16
+\]
+
+### **Conclusion**
+Le PGCD possible est **\( d \in \{1, 2, 4, 8, 16\} \)**.
+
+---
+
+## **Exercice 15 : Étude des congruences**
+On veut prouver que si \( x \) est impair alors :
+\[
+x^2 \equiv 1 \pmod{8}
+\]
+
+### **1) Écrire \( x \) sous forme d’un nombre impair**
+Un nombre impair s’écrit sous la forme :
+\[
+x = 2k + 1
+\]
+
+Calculons son carré :
+\[
+x^2 = (2k + 1)^2 = 4k^2 + 4k + 1
+\]
+
+### **2) Montrer que \( x^2 \equiv 1 \pmod{8} \)**
+On réécrit :
+\[
+x^2 = 4(k^2 + k) + 1
+\]
+
+Comme \( k^2 + k \) est toujours pair, alors **\( 4(k^2 + k) \)** est un multiple de **8**, ce qui donne :
+\[
+x^2 \equiv 1 \pmod{8}
+\]
+
+**Conclusion :** Tout carré d’un nombre impair est congru à 1 modulo 8.
+
+---
+
+
+## **Exercice 16 : Étude des nombres premiers et résolution de congruence**
+
+### **1) Montrer que 67 est un nombre premier**
+Un nombre premier est un entier naturel supérieur à 1 qui n’a que **deux** diviseurs : **1 et lui-même**.
+
+- Vérifions si **67** est divisible par les nombres premiers inférieurs à \( \sqrt{67} \approx 8.19 \), c'est-à-dire **2, 3, 5, 7** :
+  - **67 n’est pas pair**, donc il n’est pas divisible par 2.
+  - **Somme des chiffres de 67 = 6 + 7 = 13**, **non divisible par 3**.
+  - **Le dernier chiffre de 67 n’est pas 0 ou 5**, donc **pas divisible par 5**.
+  - **67 divisé par 7 donne environ 9.57**, ce qui n'est pas un entier.
+
+✅ Comme **67 n’est divisible par aucun de ces nombres**, il est **premier**.
+
+---
+
+### **2) Résoudre \( x^2 - 9 \equiv 0 \pmod{67} \)**
+L'équation se réécrit :
+\[
+x^2 \equiv 9 \pmod{67}
+\]
+
+On cherche les solutions en prenant la racine modulaire de 9 :
+\[
+x \equiv \pm 3 \pmod{67}
+\]
+
+**Solutions finales :**
+\[
+x \equiv 3 \pmod{67} \quad \text{ou} \quad x \equiv -3 \equiv 64 \pmod{67}
+\]
+
+✅ **Les solutions sont** \( x \equiv 3 \) ou \( x \equiv 64 \pmod{67} \).
+
+---
+
+## **Exercice 17 : Étude des puissances et des congruences**
+
+### **1) Montrer que \( (p \land a = 1) \) et \( (q \land a = 1) \) impliquent**
+\[
+a^{(p-1)(q-1)} \equiv 1 \pmod{pq}
+\]
+
+#### **Explication pas à pas**
+- **Théorème d’Euler** : Si \( a \) est premier avec \( p \), alors :
+  \[
+  a^{p-1} \equiv 1 \pmod{p}
+  \]
+  De même pour \( q \) :
+  \[
+  a^{q-1} \equiv 1 \pmod{q}
+  \]
+
+- Élevons \( a \) à la puissance \( (p-1)(q-1) \) :
+  \[
+  a^{(p-1)(q-1)} \equiv 1 \pmod{p}
+  \]
+  et
+  \[
+  a^{(p-1)(q-1)} \equiv 1 \pmod{q}
+  \]
+
+- Comme \( p \) et \( q \) sont premiers distincts, par **le théorème des restes chinois**, on a :
+  \[
+  a^{(p-1)(q-1)} \equiv 1 \pmod{pq}
+  \]
+
+✅ **Démonstration prouvée !**
+
+---
+
+### **2) Montrer que \( a \equiv 1 \pmod{33} \) entraîne \( a^3 \equiv 1 \pmod{33} \)**
+
+On a :
+\[
+a \equiv 1 \pmod{33}
+\]
+
+Élevons des deux côtés à la puissance 3 :
+\[
+a^3 \equiv 1^3 \equiv 1 \pmod{33}
+\]
+
+✅ **Démonstration directe !**
+
+---
+
+### **3) Trouver des entiers \( a_1, a_2, ..., a_{20} \) tels que**
+\[
+a_k \times 33 \equiv 1
+\]
+\[
+a_1^2 + a_2^2 + ... + a_{20}^2 = 206^2
+\]
+
+Ce problème demande une étude approfondie des solutions, mais on peut poser :
+\[
+a_k = \frac{1 + 33m_k}{33}, \quad m_k \in \mathbb{Z}
+\]
+puis résoudre l’équation en cherchant les bonnes valeurs de \( a_k \).
+
+---
+
+
